@@ -1,0 +1,22 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  WebAPI:
+    build:
+      context: "C:\\Users\\Ilija.DESKTOP-JDOIFUH\\RiderProjects\\DevOps Project\\\
+        WebAPI"
+      dockerfile: "Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/WebAPI.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "webapi:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\Ilija.DESKTOP-JDOIFUH\\.nuget\\packages:/home/app/.nuget/packages"
+    - "C:\\Users\\Ilija.DESKTOP-JDOIFUH\\RiderProjects\\DevOps Project\\WebAPI:/app:rw"
+    - "C:\\Users\\Ilija.DESKTOP-JDOIFUH\\RiderProjects\\DevOps Project:/src:rw"
+    working_dir: "/app"
